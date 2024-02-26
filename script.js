@@ -24,6 +24,7 @@ ScrollTrigger.scrollerProxy("#main", {
 
 
 
+
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
