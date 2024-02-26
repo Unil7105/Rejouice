@@ -21,11 +21,16 @@ ScrollTrigger.scrollerProxy("#main", {
   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
+
+
+
+
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
+
 
 var page1Content= document.querySelector("#page1-content")
 var cursor = document.querySelector("#cursor") 
@@ -57,19 +62,18 @@ cursorEffect();
 
 
 function page2Animation () {
-       gsap.from(".lower p", {
+gsap.from(".lower p", {
        y: 120,
-       stagger: 0.3,
+       stagger: 0.2,
        duration: 1,
        scrollTrigger: {
        trigger: "#page2",
        scroller: "#main",
-       start: "top 47%",
-       end: "top 46%",
-       markers: true,
+       start: "top 40%",
+       end: "top 37%",
        scrub: 2
        }
        })
        }
-       page2Animation() 
+page2Animation() 
        
